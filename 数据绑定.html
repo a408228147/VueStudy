@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div id ="app">
+{{message}}
+
+    <div v-bind:title ="message">文字</div><!--v-bind 可以让title动态获取 名为message的值-->
+<input  type="button" v-on:click ="change"  />
+    <input  type="text"  v-model="message"  />
+</div><script src="vue.min.js"></script>
+<script type="text/javascript">
+
+
+    var vm  = new Vue({
+        el:'#app',
+        data:function () {
+            return {
+                message: " hello"
+            }
+        },
+        methods: {
+            change: function () {
+
+                    this.message = "3123";
+
+            }
+        }
+
+    });
+
+
+</script>
+
+</body>
+</html>

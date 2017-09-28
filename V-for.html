@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="index" >
+    <ul>
+        <li v-for="todos in item" >{{todos.text}}</li>
+    </ul>
+
+
+</div>
+</body>
+<script src="vue.min.js"></script>
+<script>
+    new Vue({
+        el: '#index',
+        data:function () {
+        return{
+           item:[
+                {text:"1"},
+                {text:"1"},
+                {text:"1"},
+                {text:"1"},
+            ]}
+        }
+
+
+
+    })
+
+
+</script>
+
+</html>
